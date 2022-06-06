@@ -5,10 +5,13 @@
   "dependencies": {
     "@testing-library/jest-native": "*",
     "@testing-library/react-native": "*",
+    "@types/uuid": "*",
     "react": "*",
     "react-native": "*",
     "react-native-config": "*",
+    "react-native-get-random-values": "*",
     "react-native-svg": "*",
-    "@react-native-async-storage/async-storage": "*"
+    "uuid": "*",
+    "@testing-library/react": "*"
   }
 }
