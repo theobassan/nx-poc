@@ -2,8 +2,12 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "app": "packages/app",
+    "components": "packages/components",
     "mobile": "apps/mobile",
     "mobile-e2e": "packages/mobile-e2e",
+    "providers": "packages/providers",
+    "utils": "packages/utils",
     "web": "apps/web",
     "web-e2e": "packages/web-e2e"
   }
