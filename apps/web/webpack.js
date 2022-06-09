@@ -27,8 +27,8 @@ function getCustomWebpackConfig(webpackConfig) {
             'module:metro-react-native-babel-preset',
           ],
           plugins: [
-            "react-native-reanimated/plugin",
             ["react-native-web", { "commonjs": true }],
+            "react-native-reanimated/plugin",
           ]
         },
       },
