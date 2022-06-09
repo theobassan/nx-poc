@@ -19,6 +19,7 @@
     "react-native-safe-area-context": "*",
     "react-native-screens": "*",
     "react-native-vector-icons": "*",
-    "react-native-svg": "*"
+    "react-native-svg": "*",
+    "uuid": "*"
   }
 }

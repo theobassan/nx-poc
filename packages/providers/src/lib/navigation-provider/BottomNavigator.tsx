@@ -1,8 +1,10 @@
 import React from 'react';
 import { useRoute, useNavigation, getFocusedRouteNameFromRoute } from '@react-navigation/native';
-import { createBottomTabNavigator, useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { View, Text } from '@copilot/components';
-import { HeaderBackButton, useHeaderHeight } from '@react-navigation/elements';
+import { HeaderBackButton } from '@react-navigation/elements';
+import { useNavigationRoute } from './hooks';
+
 type BottomTabNavigatorParamList = {
   Home: undefined;
   Profile: undefined;
@@ -13,7 +15,8 @@ const BottomTabs = createBottomTabNavigator<BottomTabNavigatorParamList>();
 function BottomTabsNavigator() {
   const route = useRoute();
   const navigation = useNavigation();
-  const routeName = getFocusedRouteNameFromRoute(route) ?? 'Article';
+  const routeName = getFocusedRouteNameFromRoute(route);
+  const { navigationRoute } = useNavigationRoute();
 
   React.useLayoutEffect(() => {
     navigation.setOptions({
@@ -24,6 +27,7 @@ function BottomTabsNavigator() {
 
   return (
     <BottomTabs.Navigator
+      initialRouteName={navigationRoute}
       screenOptions={{
         headerLeft: (props) => (
           <HeaderBackButton {...props} onPress={navigation.goBack} />
@@ -53,12 +57,6 @@ function BottomTabsNavigator() {
 }
 
 function Home() {
-  const headerHeight = useHeaderHeight();
-  const tabBarHeight = useBottomTabBarHeight();
-
-  console.log("Home headerHeight", headerHeight)
-  console.log("Home tabBarHeight", tabBarHeight)
-
   return (
     <View
     >
@@ -71,12 +69,6 @@ function Home() {
 };
 
 function Profile() {
-  const headerHeight = useHeaderHeight();
-  const tabBarHeight = useBottomTabBarHeight();
-
-  console.log("Profile headerHeight", headerHeight)
-  console.log("Profile tabBarHeight", tabBarHeight)
-
   return (
     <View
     >

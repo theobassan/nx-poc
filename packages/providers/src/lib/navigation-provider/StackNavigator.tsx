@@ -5,7 +5,7 @@ import {
   Text,
 } from '@copilot/components';
 import DrawerNavigator from './DrawerNavigator';
-import BottomTabsNavigator from './BottonNavigator';
+import BottomTabsNavigator from './BottomNavigator';
 import { Dimensions, ScaledSize } from 'react-native';
 
 type MenuParamList = {
