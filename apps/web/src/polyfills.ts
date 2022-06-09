@@ -3,5 +3,6 @@
  *
  * See: https://github.com/zloirock/core-js#babel
  */
+import 'babel-polyfill';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';

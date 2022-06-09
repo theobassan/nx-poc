@@ -8,6 +8,7 @@ import { guid } from '@copilot/utils';
 type ViewProps = {
     testID?: string;
     children?: string | JSX.Element | JSX.Element[];
+    styles?: any;
 };
 
 function View(props: ViewProps): JSX.Element {
@@ -15,8 +16,17 @@ function View(props: ViewProps): JSX.Element {
 
     const testID = `view-${props.testID ?? guid()}`;
 
+    let viewStyles = styles(theme).container;
+
+    if (props.styles){
+        viewStyles = {
+            ...viewStyles,
+            ...props.styles
+        }
+    }
+
     return (
-        <NativeView testID={testID} style={styles(theme).container}>
+        <NativeView testID={testID} style={viewStyles}>
             {props.children && typeof props.children === 'string' && <Text testID={testID}>{props.children}</Text>}
             {props.children && typeof props.children !== 'string' && props.children}
         </NativeView>

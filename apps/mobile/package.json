@@ -3,15 +3,22 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@react-navigation/bottom-tabs": "*",
+    "@react-navigation/drawer": "*",
+    "@react-navigation/elements": "*",
+    "@react-navigation/native": "*",
+    "@react-navigation/stack": "*",
     "@testing-library/jest-native": "*",
     "@testing-library/react-native": "*",
-    "@types/uuid": "*",
     "react": "*",
     "react-native": "*",
     "react-native-config": "*",
+    "react-native-gesture-handler": "*",
     "react-native-get-random-values": "*",
-    "react-native-svg": "*",
-    "uuid": "*",
-    "@testing-library/react": "*"
+    "react-native-reanimated": "*",
+    "react-native-safe-area-context": "*",
+    "react-native-screens": "*",
+    "react-native-vector-icons": "*",
+    "react-native-svg": "*"
   }
 }

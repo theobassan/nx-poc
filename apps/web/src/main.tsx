@@ -1,7 +1,7 @@
 import { AppRegistry } from 'react-native';
 import { App } from '@copilot/app';
 
-AppRegistry.registerComponent('main', () => App);
-AppRegistry.runApplication('main', {
+AppRegistry.registerComponent('App', () => App);
+AppRegistry.runApplication('App', {
   rootTag: document.getElementById('root'),
 });
